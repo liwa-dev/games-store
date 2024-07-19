@@ -1,0 +1,145 @@
+:root {
+  --background-color: #ffffff;
+  --backgroundRGB: 255, 255, 255;
+  --text-color: #333333;
+  --primary-color: 0, 123, 255;
+  --secondary-color: #6c757d;
+  --boxShadow: 0,0,0;
+  --border-color: #dee2e6;
+  --InputBackground: #fff;
+  --menuCategory: #f0f0f0;
+  --cardColor: 220, 220, 220;
+  --cardOverlay: #007bff96;
+  --primary-Colors: #007bff;
+  --cardIcon: #ffffff;
+  --subCategorieHover: #161616;
+  --dark: #ffffff;
+  --darkBox: #1a1a1a;
+  --subCategorieHoverBackground: #b5b5b5;
+  --blackMode: 20,20,20;
+  --subCategorie: #fff;
+  --categorie-color: #333;
+  --scrollbarThumbColor: #181818;
+  --scrollColor: #838383;
+  --selectorImage: #e1e1e1;
+  --categoryFilter: #fff;
+  --bg-panel: #f9f9f9;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+body.dark-mode {
+  --boxShadow: 255,255,255;
+  --backgroundRGB: 10, 10, 10;
+  --gridColor: #2c2c2c;
+  --background-color: #101010;
+  --navItem: #bababa;
+  --blackMode: 255,255,255;
+  --subCategorie: #2c2c2c;
+  --text-color: #f0f0f0;
+  --primary-Colors: #007bff;
+  --subCategorieHoverBackground: #444444;
+  --text-color-secondary: #bababa;
+  --dark: #101010;
+  --categorie-color: #f0f0f0;
+  --cardOverlay: #101010;
+  --menuCategory: #2c2c2c;
+  --selectorImage: #161616;
+  --primary-color: 0, 123, 255;
+
+  --subCategorieHover: #f0f0f0;
+  --cardIcon: #007bff;
+  --scrollbarThumbColor: #f0f0f0;
+  --InputBackground: #fff;
+  --bg-panel: #1a1a1a;  
+  --scrollColor: #0f0f0f;
+  --categoryFilter: 
+}
+
+/* Light theme scrollbar */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollColor); /* Light background */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbarThumbColor); /* Light scrollbar thumb color */
+  /* border-radius: 6px; */
+  border: 3px solid var(--scrollColor); /* Light background */
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); /* Inner shadow for thumb */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color); /* Change thumb color on hover */
+}
+
+/* Dark theme scrollbar */
+*.dark-mode::-webkit-scrollbar {
+  width: 12px;
+}
+
+*.dark-mode::-webkit-scrollbar-track {
+  background: var(--scrollColor); /* Dark background */
+}
+
+*.dark-mode::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbarThumbColor); /* Dark scrollbar thumb color */
+  /* border-radius: 6px; */
+  border: 3px solid var(--dark); /* Dark background */
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3); /* Inner shadow for thumb */
+}
+
+*.dark-mode::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-color); /* Change thumb color on hover */
+}
+.card {
+  position: relative;
+  perspective: 1000px;
+}
+
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+
+.frontContent {
+  transform: rotateY(0deg); /* Facing front initially */
+}
+
+
+.scale {
+  transform: scale(.8);
+}
+
+
+.frontContent, .backContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back face when it is turned away from the viewer */
+  transition: transform 0.1s ease, opacity 0.5s ease; /* Smooth transition for transform and opacity */
+}
+.frontContent.hide {
+  opacity: 0; /* Use opacity for smoother hiding */
+  pointer-events: none; /* Disable interaction when hidden */
+}
+
+.backContent {
+  transform: rotateY(180deg); /* Rotate back content to face away initially */
+}
+
+.bodyPerspective {
+  transform: rotateY(180deg); /* Rotate to show the back content */
+}

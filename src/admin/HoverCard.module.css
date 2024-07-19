@@ -1,0 +1,45 @@
+.card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background-color: var(--cardOverlay);
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .cardContent {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .cardHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.7); /* Blue background with transparency */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .card:hover .cardHover {
+    opacity: 1;
+  }

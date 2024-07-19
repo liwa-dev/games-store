@@ -1,0 +1,270 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  top: 150px;
+  gap: 20px;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.group {
+  position: relative;
+  text-align: left; /* Default alignment */
+}
+
+
+.input {
+  font-size: 18px;
+  cursor: default;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px; /* Updated width for the input */
+  margin: 0 auto; /* Keeps the input centered */
+  border: none;
+  border-radius: 5px;
+  background-color: var(--InputBackground);
+  border-bottom: 1px solid #757575;
+  outline: none;
+  text-align: inherit; /* Inherits text alignment from parent */
+}
+
+.input:focus {
+  outline: none;
+}
+
+.label {
+  font-size: 16px; /* Choose appropriate font size */
+  color: #333; /* Set default color, override in specific cases */
+  position: absolute;
+  pointer-events: none;
+  top: 10px;
+  transition: 0.2s ease all;
+  bottom: 5px;
+  margin-right: 10px; /* If needed */
+}
+
+/* Adjust label position based on alignment */
+.left .label {
+  left: 0;
+  padding-left: 10px;
+  transform: translateX(0%);
+}
+
+.center .label {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right .label {
+  right: 0;
+  transform: translateX(0%); /* Correctly align to the right without moving */
+}
+
+.input:focus ~ .label, .input:valid ~ .label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 200px; /* Ensure the underline bar matches the input width */
+  margin: 0 auto; /* Centering the bar */
+}
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 200px; /* Adjust highlight width if necessary */
+  top: 25%;
+  left: 0px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.input:focus ~ .highlight {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between elements in the row */
+  width: 100%;
+  max-width: 600px; /* Control width for better layout on large screens */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between elements in the row */
+  width: 100%;
+  max-width: 600px; /* Control width for better layout on large screens */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 16px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.inputContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.inputLabel {
+  display: block;
+  margin-bottom: 5px;
+  color: #ccc;
+  font-size: 16px;
+}
+
+.textInput {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 16px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #666;
+  outline: none;
+}
+
+.textInput:focus {
+  border-bottom-color: #fff;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.inputFading {
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 100px;
+  outline: none;
+  font-size: 18px;
+  text-align: inherit;
+}
+
+.inputFading::placeholder { /* Placeholder style */
+  color: #999; /* Light grey color, adjust as needed */
+  font-size: 16px;
+  transition: opacity 0.3s ease; /* Smooth transition for the fading effect */
+}
+
+.inputFading:focus::placeholder {
+  opacity: 0; /* Fade out the placeholder on focus */
+}
+
+.textarea {
+  width: 100%; /* Full width of its container */
+  padding: 10px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 500;
+  border: 2px solid #333; /* Light grey border */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Border and padding included in width */
+  resize: none; /* Disable resizing */
+  outline: none;
+  font-size: 18px;
+  transition: 0.2s ease all;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+/* Styling the scrollbar track (part the thumb slides within) */
+.textarea::-webkit-scrollbar-track {
+  background-color: #858585; /* Light grey background for the track */
+  border-radius: 3px; /* Rounded corners for the track */
+}
+
+/* Styling the scrollbar thumb (draggable part) */
+.textarea::-webkit-scrollbar-thumb {
+  background-color: #333; /* Darker grey for the thumb */
+  border-radius: 3px; /* Rounded corners for the track */
+}
+
+/* Styling the scrollbar itself (width, etc.) */
+.textarea::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Optional: style the scrollbar when hovering */
+.textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+.textarea::placeholder {
+  color: #333;
+  opacity: 0.5; /* Set initial opacity */
+  transition: opacity 0.2s ease-in-out; /* Smooth transition for opacity */
+}
+
+.textarea:focus::placeholder {
+  opacity: 0; /* Fade out the placeholder on focus */
+}

@@ -1,0 +1,77 @@
+.switch {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 21px;
+  height: 22px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.on {
+    transform: translate(27px,-2px);
+    height: 25px;
+    width: 25px;
+  background-color: #1768ea;
+}
+
+.off {
+    transform: translate(-2px,-2px);
+  height: 25px;
+  width: 25px;
+  background-color: #4b4b4b;
+}
+
+.fill {
+    transition: all 0.3s ease;
+  background-color: #ccc;
+  height: 20px;
+}
+
+
+
+.fill.fillOn{
+    transition: all 0.3s ease;
+    background-color: #0046b6;
+}
+
+
+
+.outline {
+  background-color: transparent;
+  border: 2px solid #383838;
+}
+
+.outlineOn {
+  transform: translateX(26px);
+  transition: all 0.3s ease;
+}
+
+.outlineOff {
+  transform: translateX(-1px);
+  transition: all 0.3s ease;
+  background-color: #383838;
+}
+
+.onBg {
+  background-color: #3c3c3c; /* Background color for outlined switch when on */
+}
+
+.offBg {
+  background-color: transparent; /* Background color for outlined switch when off */
+}
+
+.toggleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

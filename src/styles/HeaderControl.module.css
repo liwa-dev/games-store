@@ -1,0 +1,124 @@
+.headerControl {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.headerControl h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #3a3a3a;
+  padding-bottom: 10px;
+}
+
+.dragInstructions {
+  margin-bottom: 15px;
+  color: #b0b0b0;
+  font-style: italic;
+}
+
+.categoriesList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.categoryWrapper {
+  transition: opacity 0.2s ease;
+  margin-bottom: 5px;
+}
+
+.categoryWrapper.dragging {
+  opacity: 0.5;
+}
+
+.categoryItem {
+  background-color: #2a2a2a;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.categoryItem:hover {
+  background-color: #3a3a3a;
+}
+
+.categoryInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dragHandleWrapper {
+  cursor: move;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 4px;
+  background-color: #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dragHandle {
+  color: #b0b0b0;
+}
+
+.categoryActions {
+  display: flex;
+  gap: 10px;
+}
+
+.controlActions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.modalCategory {
+  display: flex;
+  width: 400px;
+  height: 300px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.modalCategory h2 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+.removedCategories {
+  margin-top: 20px;
+  border-top: 1px solid #3a3a3a;
+  padding-top: 20px;
+}
+
+.removedCategories h3 {
+  color: #b0b0b0;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.removedCategoryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2a2a;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.removedCategoryItem span {
+  color: #e0e0e0;
+}

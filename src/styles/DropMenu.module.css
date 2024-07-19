@@ -1,0 +1,93 @@
+.dropdownContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.customButton {
+  background-color: #404040;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.customButton:hover {
+  background-color: #303030;
+}
+
+.icon {
+  margin-left: 10px;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s  ease-in-out;
+}
+
+.dropdownContent.open {
+  max-height: 180px;
+  overflow-y: auto;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.dropdownContent::-webkit-scrollbar-track {
+  background-color: #858585; /* Light grey background for the track */
+  border-radius: 3px; /* Rounded corners for the track */
+}
+
+.dropdownContent::-webkit-scrollbar-thumb {
+  background-color: #333; /* Darker grey for the thumb */
+  border-radius: 3px; /* Rounded corners for the track */
+}
+
+.dropdownContent::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Optional: style the scrollbar when hovering */
+.dropdownContent::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+.dropdownContent ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdownContent li {
+  padding: 15px 15px;
+  cursor: pointer;
+}
+
+.dropdownContent a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdownContent li:hover {
+  background-color: #f0f0f0;
+}
+
+.checkbox {
+  margin-right: 10px;
+  font-size: 1.2em;
+}

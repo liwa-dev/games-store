@@ -1,0 +1,134 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+  
+  .sectionTitle {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #555;
+    text-transform: uppercase;
+  }
+  
+  .settingItem {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+
+
+  .settingItem img:nth-child(2) {
+    width: 12%;
+  }
+  
+  .settingInfo {
+    flex-grow: 1;
+  }
+  
+  .settingInfo h3 {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .settingInfo p {
+    font-size: 0.9em;
+    color: #777;
+  }
+
+  .darkMode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+  }
+  
+  .darkMode h1,
+  .darkMode h2,
+  .darkMode h3 {
+    color: #ffffff;
+  }
+  
+  .darkMode .section {
+    background-color: #2c2c2c;
+    border-color: #444444;
+  }
+  
+  .darkMode .settingItem {
+    background-color: #333333;
+    border-color: #555555;
+  }
+  
+  .darkMode .settingInfo p {
+    color: #cccccc;
+  }
+  
+  .darkMode button {
+    /* background-color: #4a90e2; */
+    color: #ffffff;
+    border-color: #6aa0e8;
+  }
+  
+  .darkMode button:hover {
+    /* background-color: #3a7bc2; */
+  }
+  
+  .darkMode input,
+  .darkMode select {
+    background-color: #444444;
+    color: #f0f0f0;
+    border-color: #666666;
+  }
+  
+  .darkMode input::placeholder {
+    color: #999999;
+  }
+  
+  .darkMode .selector {
+    background-color: #333333;
+    border-color: #555555;
+  }
+  
+  .darkMode .selector .option {
+    background-color: #444444;
+    color: #f0f0f0;
+  }
+  
+  .darkMode .selector .option:hover {
+    background-color: #555555;
+  }
+  
+  .darkMode .switch {
+    background-color: #444444;
+  }
+  
+  .darkMode .switch .slider {
+    background-color: #666666;
+  }
+  
+  .darkMode .switch.on .slider {
+    background-color: #4a90e2;
+  }

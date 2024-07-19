@@ -1,0 +1,159 @@
+.container {
+  min-height: 100vh;
+
+  color: white;
+  padding: 2rem;
+
+  user-select: none;
+  border-radius: 5px;
+
+  background-color: var(--bg-panel);
+  position: relative;
+  width: 80%; /* Decrease width */
+  margin: 0 auto; /* Center the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.cardLink {
+  text-decoration: none;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background-color: var(--gridColor);
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(var(--cardColor));
+  border-radius: 0.5rem;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+  background-color: var(--cardOverlay);
+  width: 100%;
+  transition: width 0.5s ease, background-color 0.5s ease;
+  height: 100%;
+  z-index: 10;
+}
+
+.card:hover .cardOverlay {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(10, 26, 47, .2);
+  width: 0;
+  
+}
+
+.icon {
+  width: 50%;
+  height: 50%;
+  z-index: 11;
+  color: var(--dark);
+  transition: all 0.3s ease;
+}
+
+.card:hover .icon {
+  color: var(--darkBox);
+}
+
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0;
+  z-index: 2;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+
+.dark {
+  color: #f1f1f1;
+}
+
+
+
+.card:hover .dark {
+  color: #1a1a1a;
+}
+
+
+
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .glow {
+  opacity: 1;
+}
+
+.cardContent {
+  position: relative;
+  /* z-index: 10; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+
+.cardContent.hovered .icon {
+  width: 30%;
+  height: 30%;
+  transform: translateY(-10px);
+}
+
+.cardContent.hovered .title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

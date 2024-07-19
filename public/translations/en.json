@@ -1,0 +1,103 @@
+{
+    "home": {
+        "HeaderMessage": "Charge, Play, Recharge",
+        "homeParagraphe": "Discover and fill up your digital services and favorite games with ease. Enjoy a smooth and secure experience with multiple payment options. Enhance your digital life today.",
+        "sectionTitle": "Discover Gaming Essentials",
+        "section2Title": "Your Ultimate Destination for Digital Goods",
+
+        "sectionText": "Explore our curated selection of game accounts, rare items, and digital collectibles. Enhance your gaming experience with exclusive offers designed for true gaming enthusiasts.",
+        "sectionText2": "Discover the best deals on software keys and digital content. Shop now and elevate your experience.",
+        "footer": "We respect copyright laws. If you believe any content on this site infringes your copyright, please contact us through our contact form.",
+        "news": "NEWS",
+        "reviews": "People Who Trusted us"
+    },
+    "header": {
+        "logiNRegister": "Login / Register",
+        "home": "Home",
+        "games": "Games",
+        "busniess": "Business",
+        "search": "What are you looking for?",
+        "dropMenu": {
+            "myAccount": "My Account",
+            "logout": "Logout",
+            "privacysetting": "Privacy Settings",
+            "controlPanel": "Control Panel"
+        }
+    },
+    "purchese": {
+        "montant": "Choose the amount",
+        "payment": "Choose your payment method",
+        "information": "Information",
+        "confirmation": "Confirm your purchase",
+        "total": "Total",
+        "montant2": "Amount",
+        "pay": "Pay"
+    },
+    "login": {
+        "login": "Login",
+        "register": "Create an Account",
+        "email": "Email",
+        "password": "Password",
+        "username": "Username",
+        "rePassword": "Confirm Password",
+        "forget": "Forgot Password?",
+        "haveaccount": "Already have an account?",
+        "noaccount": "Don't have an account?",
+        "registerText": "Register"
+    },
+    "myaccount": {
+        "name": "Manage Your Account",
+        "information": "Your Personal Account",
+        "adresse": "Add / Edit Address",
+        "history": "My Orders History and Details",
+        "email": "Email",
+        "password": "Password",
+        "rePassword": "Confirm Password"
+    },
+    "settings": {
+        "title": "Settings",
+        "twoFactorAuth": {
+            "info": "Account Security",
+            "name": "Two-Factor Authentication",
+            "description": "Enable two-factor authentication to secure your account.",
+            "changepassword": "Change Password",
+            "viewloginhistory": "View Login History"
+        },
+        "uiperferences": {
+            "info": "UI Preferences",
+            "dark": "Dark Mode",
+            "infodark": "Toggle between Dark and Light mode.",
+            "language": "Language",
+            "infolanguage": "Choose your preferred language."
+        },
+        "accountmanagement": {
+            "info": "Account Management",
+            "name": "Delete My Account"
+        },
+        "paymentmethods": {
+            "info": "Payment Methods",
+            "name": "Payment Methods Coming Soon"
+        },
+        "save": "Save"
+    },
+    "admin": {
+        "dashboard": {
+            "name": "Dashboard"
+        },
+        "userManagement": {
+            "name": "User Management"
+        },
+        "serviceManagement": {
+            "name": "Service Management"
+        },
+        "headerControl": {
+            "name": "Control Panel"
+        },
+        "reviews": {
+            "name": "Review Management"
+        }
+    },
+    "notFound": {
+        "name": "Service Not Found"
+    }
+}

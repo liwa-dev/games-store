@@ -1,0 +1,128 @@
+.checkboxWrapper {
+  /* display: flex; */
+  align-items: center;
+  cursor: pointer;
+}
+
+.inpCbx {
+  display: none;
+  visibility: hidden;
+}
+
+.cbx {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cbx span {
+  display: inline-block;
+  
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+
+.cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  transform: scale(1);
+  border-radius: 20px;
+
+  vertical-align: middle;
+  border: 1px solid #9098a9;
+  transition: all 0.2s ease;
+}
+
+.cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  
+  left: 2px;
+  fill: none;
+  stroke: #506eec;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #506eec;
+  display: block;
+  transform: scale(0);
+  
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.cbx span:last-child {
+  padding-left: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+}
+
+.cbx:hover span:first-child {
+  border-color: #506eec;
+  border-radius: 20px;
+
+}
+
+.inpCbx:checked + .cbx span:first-child {
+  background: transparent;
+  border-color: #506eec;
+  animation: wave 0.4s ease;
+  border-radius: 20px;
+
+}
+
+.inpCbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+
+.inpCbx:checked + .cbx span:last-child {
+  animation: slideUp 0.6s forwards;
+}
+
+.inpCbx:not(:checked) + .cbx span:last-child {
+  animation: slideDown 0.6s forwards;
+}
+
+@keyframes wave {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-10px); /* Start from above */
+    opacity: 0; /* Start with opacity 0 */
+  }
+  100% {
+    transform: translateY(0); /* Move to center */
+    opacity: 1; /* End with opacity 1 */
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(10px); /* Start from center */
+    opacity: 0; /* Start with opacity 1 */
+  }
+  100% {
+    transform: translateY(0); /* Move down */
+    opacity: 1; /* End with opacity 0 */
+  }
+}

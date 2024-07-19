@@ -1,0 +1,120 @@
+.notificationContainer {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    width: 350px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  
+  .notification {
+    width: 100%;
+    background-color: #2196f3;
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-out;
+  }
+  
+  .notificationIcon {
+    margin-right: 12px;
+    font-size: 20px;
+  }
+  
+  .notificationContent {
+    flex-grow: 1;
+  }
+  
+  .notificationTitle {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .notificationMessage {
+    margin: 4px 0 0;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .notificationClose {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  
+  .notificationClose:hover {
+    opacity: 1;
+  }
+  
+  /* Fade animations */
+  .fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .fadeOut {
+    animation: fadeOut 0.5s ease-in forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+  }
+  
+  /* Slide animations */
+  .slideIn {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  .slideOut {
+    animation: slideOut 0.5s ease-in forwards;
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+  }
+  
+  /* Pop animations */
+  .popIn {
+    animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .popOut {
+    animation: popOut 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+  
+  @keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes popOut {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(0.5); opacity: 0; }
+  }
+  
+  .notificationSuccess { background-color: #4caf50; }
+  .notificationError { background-color: #f44336; }
+  .notificationWarning { background-color: #ff9800; }
+  .notificationInfo { background-color: #2196f3; }

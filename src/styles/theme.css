@@ -1,0 +1,14 @@
+
+
+body.dark-mode {
+  --background-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --primary-color: #0056b3;
+  --secondary-color: #545b62;
+  --border-color: #4a4a4a;
+}
+
+body {
+  background-color: var(--background-color); /* Use CSS variable */
+  color: var(--text-color); /* Use CSS variable */
+}

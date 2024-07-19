@@ -1,0 +1,108 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #e1e1e1;
+  border-radius: 10px;
+}
+
+.handle {
+  position: absolute;
+  width: 20px;
+  
+  height: 20px;
+  background-color: #4158d0;
+  border-radius: 50%;
+  transform: translate(-100%, -30%); /* Center handle */
+  transition: transform 0.3s ease-in-out; /* Add transition for scaling effect */
+}
+
+.track {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  height: 4px;
+  width: 100%;
+  background-color: #484747;
+  border-radius: 2px;
+  transform: translateY(-50%);
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.slider:hover .handle {
+  background-color: #3148a0;
+}
+
+.slider:active .handle {
+  background-color: #3148a0;
+}
+
+.slider:hover .track {
+  background-color: #3f3f3f;
+}
+
+.slider:active .track {
+  background-color: #212121;
+}
+
+.valueLabel {
+  position: absolute;
+  background-color: #4158d0;
+  color: white;
+  padding: 2px 6px;
+  user-select: none;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.valueLabelAbove {
+  top: -30px; /* Adjust based on handle size */
+  transform: translateX(-90%); /* Center the label horizontally */
+}
+
+.valueLabelRight {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  text-align: center;
+  transform: translateY(-50%);
+  color: #212121;
+  padding: 2px 6px;
+  user-select: none;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.valueLabelInside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  transform: scale(0);
+  font-size: 12px;
+  user-select: none;
+  transition: transform 0.3s ease-in-out; /* Add transition for zoom effect */
+}
+
+.zoomEffect:hover .valueLabelInside {
+  transform: scale(1); /* Zoom in */
+}
+.zoomEffect:active .valueLabelInside {
+  transform: scale(1); /* Zoom in */
+}
+
+
+.slider:hover .scaleHandle {
+  transform: scale(1.2) translate(-80%, -20%); /* Scale handle */
+}
+.slider:active .scaleHandle {
+  transform: scale(1.2) translate(-80%, -20%); /* Scale handle */
+}
+
+.scaleHandle {
+  transform: scale(1) translate(-100%, -20%); /* Reset scale */
+}

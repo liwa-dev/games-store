@@ -1,0 +1,130 @@
+.carouselContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.reviewsWrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.reviewsSlider {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.reviewCard {
+  /* flex: 0 0 auto; */
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+
+.reviewContent {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.userName {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.userDate {
+  font-size: 0.8em;
+  color: #999;
+}
+
+.rating {
+  color: gold;
+}
+
+.reviewText {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Styles for the Button component */
+.button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+@media (min-width: 500px) {
+  .carouselContainer {
+    flex-direction: row;
+  }
+
+  .reviewsWrapper {
+    /* width: calc(100% - 120px); */
+    /* max-width: 800px; */
+  }
+
+  .reviewsSlider {
+    flex-direction: row;
+  }
+
+  .reviewCard {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .buttonContainer {
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .button {
+    margin: 10px 0;
+  }
+}
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+}
+
+
+/* @media (max-width: 425px) {
+  .buttonContainer {
+    width: 100%;
+  }
+} */

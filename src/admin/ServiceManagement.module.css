@@ -1,0 +1,182 @@
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.borderPrices {
+  position: relative; /* Ensure the container is positioned relatively */
+  border: 2px dotted #f9f9f9; /* Dotted border */
+  border-radius: 8px;
+  padding: 20px; /* Adjust padding as needed */
+  user-select: none;
+  margin-right: 10px;
+  text-align: center;
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.borderPricesContent {
+  z-index: 1; /* Ensure the content is above the icons */
+}
+
+
+.borderPricesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.borderHover {
+  position: absolute; /* Position the hover element absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px; /* Match the border radius */
+  pointer-events: none; /* Ensure the border does not interfere with interactions */
+}
+
+.icons {
+  display: flex; /* Hide icons by default */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0; /* Start with hidden icons */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  transform: translate(-50%, -50%);
+  gap: 2px;
+  z-index: 6;
+}
+
+.currentlyAdded {
+  padding: 10px;
+  margin: 5px;
+  font-size: 100%;
+  text-align: center;
+  background-color: var(--background-color);
+  border-radius: 9px;
+}
+
+.borderPrices:last-child {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.borderPricesContent p:first-child {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.borderPrices:last-child:hover {
+  background-color: var(--primary-Colors);
+  color: white;
+}
+
+
+
+.borderPrices:hover .icons {
+  opacity: 1; /* Show icons on hover */
+}
+
+
+.icons button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.borderPrices:hover .icons button svg {
+  transition: color 0.3s ease;
+
+  color: white;
+}
+.borderPrices .icons button:hover svg {
+  transition: color 0.3s ease;
+
+  color: var(--primary-Colors);
+}
+.borderPrices:hover .borderPricesContent {
+  opacity: 0.5;
+}
+
+
+
+.borderPrices:hover {
+  background-color: black;
+  z-index: 7;
+}
+
+.editForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* width: 780px; */
+}
+
+.formActions {
+  display: flex;
+  gap: 10px;
+}
+
+.serviceList {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.serviceItem {
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cardOverlay);
+}
+
+.serviceImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.serviceInfo {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.serviceInfo h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.serviceInfo p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.serviceActions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  /* background-color: #f0f0f0; */
+  background-color: var(--cardOverlay);
+}
+
+.serviceActions button {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}

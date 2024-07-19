@@ -1,0 +1,225 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 400px;
+    margin: 0 auto;
+    background-color: var(--bg-panel);
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  .background {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 500px;
+    width: 400px;
+    transform: translateX(-50%);
+    background-color: red;
+    opacity: 0;
+  }
+  
+  .animate .background {
+    animation: moveBackground 2s ease-in-out forwards;
+    background-blend-mode: screen;
+
+    opacity: 1;
+  }
+  
+  .container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--bg-panel);
+    animation: moveColorAndPosition 2s linear forwards 2s;
+    position: absolute;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards 2s;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    opacity: 0;
+    animation: slideIn 0.3s forwards;
+  }
+  
+  .input:nth-child(1) { animation-delay: 1.5s; }
+  .input:nth-child(2) { animation-delay: 2s; }
+  .input:nth-child(3) { animation-delay: 2.5s; }
+  
+  .loginButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff004c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    opacity: 0;
+    animation: slideIn 0.3s forwards 3s;
+  }
+  
+  .registerPrompt {
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 3.2s;
+  }
+  
+  .registerPrompt a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0 5px;
+    border-radius: 100px;
+    font-weight: 500;
+    background-color: var(--primary-Colors);
+  }
+  
+  .socialLogin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 3.4s;
+  }
+
+  .facebook{
+    border-radius: 0 !important;
+    height: 40px !important;
+    padding: 0 6px !important;
+    outline: none;
+  }
+
+  .facebook div {
+    display: block !important;
+    height: 50% !important;
+    position: relative;
+    top: 0px;
+    left: 1px;
+  }
+
+
+  .form input {
+    margin-bottom: 15px;
+  }
+  
+  .socialButton {
+    width: 15%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    opacity: 0;
+    animation: slideIn 0.3s forwards;
+  }
+
+  .socialButton svg {
+    width: 100%;
+    opacity: 1;
+    transition: opacity .25s ease;
+    height: 100%;
+  }
+
+  .socialButton:hover svg {
+    opacity: .6;
+  }
+  
+  .socialButton:nth-child(1) { animation-delay: 3.5s; }
+  .socialButton:nth-child(2) { animation-delay: 3.6s; }
+  .socialButton:nth-child(3) { animation-delay: 3.7s; }
+  
+  .animating .form,
+  .animating .registerPrompt,
+  .animating .socialLogin {
+    animation: slideOut 0.5s forwards;
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes moveColorAndPosition {
+    0% {
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--bg-panel);
+    }
+    50% {
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--bg-panel);
+    }
+    100% {
+      top: 5%;
+      transform: translateY(0);
+      color: white;
+    }
+  }
+  
+  @keyframes moveBackground {
+    0% {
+      transform: translateX(-50%) translateY(0);
+      background-color: var(--primary-Colors);
+  }
+    37.5% {
+      transform: translateX(-50%) translateY(0);
+      background-color: var(--primary-Colors);
+
+    }
+    87.5% {
+      transform: translateX(-50%) translateY(100%);
+      background-color: var(--bg-panel);
+
+  }
+    100% {
+      transform: translateX(-50%) translateY(100%);
+      background-color: var(--bg-panel);
+  }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

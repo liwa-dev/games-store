@@ -1,0 +1,103 @@
+{
+    "home": {
+        "HeaderMessage": "Chargez, Jouez, Rechargez",
+        "homeParagraphe": "Découvrez et remplissez vos services numériques et vos jeux préférés en toute simplicité. Profitez d'une expérience fluide et sécurisée avec plusieurs options de paiement. Améliorez votre vie numérique dès aujourd'hui.",
+        "sectionTitle": "Découvrez les essentiels des jeux",
+        "section2Title": "Votre destination ultime pour les produits numériques",
+        "sectionText": "Explorez notre sélection de comptes de jeux, d'objets rares et de collections numériques. Améliorez votre expérience de jeu avec des offres exclusives conçues pour les vrais passionnés de jeux.",
+        "sectionText2": "Découvrez les meilleures offres sur les clés de logiciels et le contenu numérique. Achetez maintenant et améliorez votre expérience.",
+        "footer": "Nous respectons les lois sur les droits d'auteur. Si vous pensez que tout contenu sur ce site enfreint vos droits d'auteur, veuillez nous contacter via notre formulaire de contact.",
+        "news": "NOUVELLES",
+        "reviews": "Les gens qui nous ont fait confiance"
+    },
+    "header": {
+        "logiNRegister": "Connexion / Inscription",
+        "home": "Accueil",
+        "games": "Jeux",
+        "busniess": "Affaires",
+        "search": "Que cherchez-vous ?",
+        "dropMenu": {
+            "myAccount": "Mon compte",
+            "logout": "Déconnexion",
+            "privacysetting": "Paramètres de confidentialité",
+            "controlPanel": "Panneau de contrôle"
+        }
+    },
+    "purchese": {
+        "montant": "Choisissez le montant",
+        "payment": "Choisissez votre mode de paiement",
+        "information": "Informations",
+        "confirmation": "Confirmez votre achat",
+        "montant2": "Montant",
+        "total": "Total",
+        "pay": "Payer"
+    },
+    "login": {
+        "login": "Connexion",
+        "register": "Créer un compte",
+        "email": "Email",
+        "password": "Mot de passe",
+        "username": "Nom d'utilisateur",
+        "rePassword": "Confirmez le mot de passe",
+        "forget": "Mot de passe oublié ?",
+        "registerText": "Inscription",
+        "haveaccount": "Vous avez déjà un compte ?",
+        "noaccount": "Vous n'avez pas de compte ?"
+    },
+    "myaccount": {
+        "name": "Gérez votre compte",
+        "information": "Votre compte personnel",
+        "adresse": "Ajouter / Modifier l'adresse",
+        "history": "Historique et détails de mes commandes",
+        "email": "Email",
+        "password": "Mot de passe",
+        "rePassword": "Confirmez le mot de passe"
+    },
+    "settings": {
+        "title": "Paramètres",
+        "twoFactorAuth": {
+            "info": "Sécurité du compte",
+            "name": "Authentification à deux facteurs",
+            "description": "Activez l'authentification à deux facteurs pour sécuriser votre compte.",
+            "changepassword": "Changer le mot de passe",
+            "viewloginhistory": "Voir l'historique des connexions"
+        },
+        "uiperferences": {
+            "info": "Préférences de l'interface utilisateur",
+            "dark": "Mode sombre",
+            "infodark": "Basculez entre le mode sombre et le mode clair.",
+            "language": "Langue",
+            "infolanguage": "Choisissez votre langue préférée."
+        },
+        "accountmanagement": {
+
+            "info": "Gestion du compte",
+            "name": "Supprimer mon compte"
+        },
+        "paymentmethods": {
+            "info": "Méthodes de paiement",
+            "name": "Méthodes de paiement bientôt disponibles"
+        },
+        "save": "Enregistrer"
+    },
+    "admin": {
+        "dashboard": {
+            "name": "Tableau de bord"
+        },
+        "userManagement": {
+            "name": "Gestion des utilisateurs"
+        },
+        "serviceManagement": {
+            "name": "Gestion des services"
+        },
+        "headerControl": {
+            "name": "Panneau de contrôle"
+        },
+        "reviews": {
+            "name": "Gestion des avis"
+        }
+    },
+    "notFound": {
+        "name": "Service Introuvable"
+    }
+}

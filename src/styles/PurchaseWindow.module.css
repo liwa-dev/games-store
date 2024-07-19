@@ -1,0 +1,192 @@
+/* styles/PurchaseWindow.module.css */
+.container {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.currency {
+  user-select: none;
+  font-size: 12px;
+  background-color:var(--primary-Colors);
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #1f1f1f;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  /* overflow: auto; */
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
+.left {
+  flex-basis: 30%; /* Adjust this value to control the width of the left side */
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-right: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left img {
+  max-width: 100%;
+  max-height: 200px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.planPrice {
+  font-size: 12px;
+  padding: 2px;
+}
+
+.productInfo {
+  width: 100%;
+  text-align: center;
+  background-color: #2a2a2a;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+
+.productInfo p svg {
+  padding: 0;
+  margin: 0;
+}
+
+.productInfo h2 {
+  font-size: 2rem;
+}
+
+.productInfo p, .productInfo ol, .productInfo a {
+  margin: 10px 0;
+}
+
+.officialLink {
+  color: #1db954;
+}
+
+.right {
+  flex: 1; /* This will make the right side take the remaining space */
+  padding: 20px;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.amountOptions, .paymentOptions {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.amountOptions button:hover {
+  opacity: 0.6;
+}
+
+
+
+.amountButton, .paymentButton {
+  background-color: #1b1b1b;
+  border: none;
+  margin: 5px;
+  width: auto;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out text and image */
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  padding: 10px; /* Add padding for spacing */
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.paymentButton img ,svg{
+  margin-right: 5px;
+}
+
+.paymentButton span {
+  flex: 1; /* Allow text to take up remaining space */
+  margin-right: 10px; /* Add space between text and image */
+}
+
+.paymentButton {
+  opacity: .6;
+  transition: opacity 0.3s ease;
+}
+
+
+/* Add this to your CSS file */
+.paymentButton.active {
+  opacity: 1;
+}
+
+
+
+
+
+.paymentLogo {
+  width: 30px; /* Set a fixed width for the logo */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0;
+}

@@ -1,0 +1,96 @@
+.panel {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center; /* Ensure items are centered vertically */
+  height: 410px;
+  user-select: none;
+  width: 730px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; /* Allow the left section to take up available space */
+}
+
+.right {
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--selectorImage);
+  padding: 25px;
+  gap: 10px;
+  flex: 3; /* Allow the right section to take up more space */
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.divider {
+  width: 4px;
+  height: 100%;
+  background-color: #ccc; /* Adjust color as needed */
+  margin: 0 20px; /* Adjust spacing as needed */
+}
+
+.randomImageContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.randomImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;}
+
+  .randomImageContainer {
+
+    transition: transform 0.3s ease;
+
+  }
+
+.randomImageContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(var(--blackMode), 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+  z-index: 1; /* Ensure the pseudo-element is above the image */
+  pointer-events: none; /* Ensure the pseudo-element does not interfere with hover events */
+}
+
+.randomImageContainer:hover::after {
+  opacity: 0.5;
+}
+
+
+.randomImageContainer:hover {
+  transform: scale(1.1);
+}
+
+.checked::after {
+  content: '✔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50.5%, -52%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgba(0, 123, 255, 1);
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  z-index: 2; /* Ensure the check text is above everything else */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
