@@ -22,7 +22,6 @@ export const LanguageProvider = ({ children }) => {
         }
 
         const data = await response.json();
-        console.log(data);
         setTranslations(data);
       } catch (error) {
         console.error('Failed to load translations:', error);

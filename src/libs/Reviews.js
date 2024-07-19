@@ -29,7 +29,6 @@ const Reviews = () => {
 
       try {
         const fetchedReviews = await getReviews();
-        console.log('Fetched Reviews:', fetchedReviews); // Debugging line
         setReviews(fetchedReviews);
         const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(fetchedReviews), SECRET_KEY).toString();
         localStorage.setItem('reviews', encryptedData);
@@ -44,14 +43,12 @@ const Reviews = () => {
 
   useEffect(() => {
     if (reviews.length > 0) {
-      console.log('All Reviews:', reviews.map(r => `${r.id} (${r.user_name})`));
     }
   }, [reviews]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => {
       const newIndex = (prevIndex + 1) % reviews.length;
-      console.log('Next clicked. Current user:', reviews[newIndex].user_name);
       return newIndex;
     });
   };
@@ -59,12 +56,10 @@ const Reviews = () => {
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => {
       const newIndex = (prevIndex - 1 + reviews.length) % reviews.length;
-      console.log('Prev clicked. Current user:', reviews[newIndex].user_name);
       return newIndex;
     });
   };
 
-  console.log('Current Index:', currentIndex, 'Total Reviews:', reviews.length);
 
   return (
     reviews.length > 0 ? (

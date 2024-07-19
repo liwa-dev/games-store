@@ -12,8 +12,7 @@ export default function HeaderControl({ headerConfig, setHeaderConfig }) {
   const [draggedItem, setDraggedItem] = useState(null);
 
   useEffect(() => {
-    console.log('Current headerConfig:', headerConfig);
-  }, [headerConfig]);
+    }, [headerConfig]);
 
   const addCategory = useCallback(() => {
     if (newCategory.name && newCategory.path) {
@@ -23,8 +22,7 @@ export default function HeaderControl({ headerConfig, setHeaderConfig }) {
       }));
       setNewCategory({ name: '', path: '' });
     } else {
-      console.log('Category name or path is missing');
-    }
+      }
   }, [newCategory, setHeaderConfig]);
 
   const openAddCategoryModal = () => {

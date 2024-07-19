@@ -103,7 +103,6 @@ const Login = ({ setCurrentUser }) => {
   };
 
   const handleFacebookLoginSuccess = async (response) => {
-    console.log("Facebook login successful:", response);
     const { name, email } = response.profile;
   
     try {
@@ -138,17 +137,14 @@ const Login = ({ setCurrentUser }) => {
 
 
   const handleFacebookLoginFailure = (error) => {
-    console.log("Facebook login failed:", error);
     notifyError("Facebook login failed");
   };
 
   
   const handleGoogleLoginSuccess = async (credentialResponse) => {
-    console.log("Google login successful:", credentialResponse);
     try {
       const result = await registerGoogleUser(credentialResponse.credential);
       const { user, token } = result;
-      console.log("Login.js, token:", token)
       setGoogleToken(token);
       setCurrentUser({ isLoggedIn: true, user: user });
       notifySuccess("You have successfully logged in with Google");
@@ -226,7 +222,6 @@ const Login = ({ setCurrentUser }) => {
                type="icon"
           onSuccess={handleGoogleLoginSuccess}
           onError={() => {
-            console.log('Google Login Failed');
             notifyError("Google login failed");
           }}
         />

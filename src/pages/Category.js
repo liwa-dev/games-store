@@ -15,7 +15,6 @@ const Category = ({ onTogglePerspective, setData, setCurrentPage, currentPage })
   const [totalItems, setTotalItems] = useState(0); // State to store total number of items
 
   useEffect(() => {
-    console.log('Fetching services for category:', categoryName);
     const fetchServices = async () => {
       setIsLoading(true);
       try {
@@ -39,7 +38,6 @@ const Category = ({ onTogglePerspective, setData, setCurrentPage, currentPage })
           setTotalItems(count);
         }
 
-        console.log(supabaseData);
         setServices(supabaseData);
       } catch (error) {
         console.error('Error fetching services:', error);
@@ -57,7 +55,6 @@ const Category = ({ onTogglePerspective, setData, setCurrentPage, currentPage })
       setTimeout(resolve, 100); // Adjust the timeout to match the scroll duration
     });
 
-    console.log('clicked', service);
     onTogglePerspective();
     setData(service);
     document.body.style.overflow = 'hidden';
@@ -83,7 +80,7 @@ const Category = ({ onTogglePerspective, setData, setCurrentPage, currentPage })
         }
       </h2>
       <div className={styles.cardContainer}>
-      {console.log(services)}
+      {}
         {services?.length > 0 ? services.map((service, index) => (
           <Card
             key={index}

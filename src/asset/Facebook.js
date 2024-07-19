@@ -8,20 +8,16 @@ const FacebookLoginComponent = ({ onLoginSuccess, onLoginFailure }) => {
     <FacebookLogin
       appId={process.env.REACT_APP_FACEBOOK_APP_ID}
       onSuccess={(response) => {
-        console.log('Login Success!', response);
         // Fetch additional profile information if needed
         window.FB.api('/me', { fields: 'id,name,email,picture' }, (profile) => {
-          console.log('Get Profile Success!', profile);
           onLoginSuccess({ ...response, profile });
         });
       }}
       onFail={(error) => {
-        console.log('Login Failed!', error);
         onLoginFailure(error);
       }}
       onProfileSuccess={(response) => {
-        console.log('Get Profile Success!', response);
-      }}
+        }}
       render={({ onClick }) => (
         <FacebookLoginButton className={styles.facebook} children={""} onClick={onClick} />
       )}

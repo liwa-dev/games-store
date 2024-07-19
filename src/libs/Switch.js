@@ -17,7 +17,6 @@ const darkenColor = (color, amount) => {
   b = b > 255 ? 255 : b < 0 ? 0 : b;
 
   const result = (usePound ? "#" : "") + (r << 16 | g << 8 | b).toString(16).padStart(6, '0');
-  console.log(`Original color: #${color}, Darkened color: ${result}`);
   return result;
 };
 

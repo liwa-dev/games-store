@@ -130,23 +130,17 @@ function App() {
   useEffect(() => {
     const checkAuthStatus = async () => {
       const tokenData = getAuthToken();
-      console.log("App.js, tokenData:", tokenData);
       if (tokenData && tokenData.provider === 'google') {
         try {
           const decodedToken = decodeJWT(tokenData.token);
-          console.log("App.js, decodedToken:", decodedToken);
-  
           const user = await getUserByEmail(decodedToken.email);
-          console.log("App.js, fetched user:", user);
-  
           if (user) {
             setCurrentUser({
               isLoggedIn: true,
               user: user,
             });
           } else {
-            console.log("App.js, user not found, logging out");
-          }
+            }
         } catch (error) {
           console.error('Error fetching user data:', error);
         }
@@ -159,8 +153,7 @@ function App() {
               user: user,
             });
           } else {
-            console.log("App.js, user not found, logging out");
-          }
+            }
         } catch (error) {
           console.error('Error fetching user data:', error);
         }
@@ -227,8 +220,7 @@ function App() {
 
 
   useEffect(() => {
-    console.log("User is now ", currentUser.isLoggedIn ? 'logged in' : 'logged out');
-  }, [currentUser.isLoggedIn]);
+    }, [currentUser.isLoggedIn]);
 
 
 

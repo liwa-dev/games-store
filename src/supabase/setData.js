@@ -44,7 +44,6 @@
 
   // The rest of your code remains unchanged
   export const addUser = async (user) => {
-    console.log('Attempting to add user:', user);
     const { data, error } = await supabase
       .from('users')
       .insert([{
@@ -60,7 +59,6 @@
       console.error('Supabase error:', error);
       throw error;
     }
-    console.log('User added successfully:', data);
     return data;
   };
 

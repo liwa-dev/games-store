@@ -73,7 +73,6 @@ export const ServiceForm = React.forwardRef(({ provider="normal", service, onSav
         ...editingService,
         categorie: editingService.categorie.join(',')
       };
-      console.log('Submitting service:', serviceToSave);
       onSave(serviceToSave);
     };
     

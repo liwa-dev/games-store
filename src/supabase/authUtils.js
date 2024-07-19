@@ -4,7 +4,6 @@ export const setAuthToken = (token, provider = 'email') => {
     provider,
     exp: new Date().getTime() + (24 * 60 * 60 * 1000) // 24 hours from now
   };
-  console.log('Setting auth token with expiration:', new Date(tokenData.exp).toString());
   localStorage.setItem('authToken', JSON.stringify(tokenData)); // Use consistent key name 'authToken'
 };
 
@@ -21,7 +20,6 @@ export const setFacebookToken = (userData) => {
 };
 
 export const setGoogleToken = (token) => {
-  console.log("This is the token", token);
   const tokenData = {
     token,
     provider: 'google',

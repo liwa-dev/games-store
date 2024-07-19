@@ -18,7 +18,6 @@ const CustomLoader = ({ resourceName }) => {
   };
 
   useEffect(() => {
-    console.log('Animation data:', animationData);
     const interval = setInterval(() => {
       setAnimationProgress((prevProgress) => {
         if (prevProgress >= 100) {

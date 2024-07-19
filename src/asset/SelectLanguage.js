@@ -14,7 +14,6 @@ export default function SelectLanguage() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLanguageChange = (langCode) => {
-    console.log(langCode)
     setLanguage(langCode);
     setIsOpen(false);
   };

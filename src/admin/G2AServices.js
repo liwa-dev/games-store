@@ -39,7 +39,6 @@ export default function G2AServices() {
           }
         }
 
-        console.log('Fetched G2A services:', g2aData);
         setG2aServices(g2aData);
         setTotalPages(g2aResponse.total);
       } catch (error) {
@@ -51,7 +50,6 @@ export default function G2AServices() {
   }, [currentPage]);
 
   const handleSave = async (editedService) => {
-    console.log('Saving edited service:', editedService);
     try {
       const serviceToSave = {
         ...editedService,
@@ -65,8 +63,6 @@ export default function G2AServices() {
   
       if (editedService.id) {
         const { data, count } = await updateService(serviceToSave);
-        console.log('Update response:', { data, count });
-  
         if (data && data.length > 0) {
           notifySuccess('Service updated successfully');
           closeModal();
@@ -75,7 +71,6 @@ export default function G2AServices() {
         }
       } else {
         const response = await addService(serviceToSave);
-        console.log('Add response:', response);
         if (response && response.length > 0) {
           closeModal();
         } else {

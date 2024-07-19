@@ -58,11 +58,11 @@ const Modal = ({ isOpen, onClose, onOk, children, showCancel = true, showOk = tr
           )}
           {showOk && (
             <button onClick={() => {
-              console.log('OK button clicked'); // Debugging log
+              // Debugging log
               setIsVisible(false);
               setTimeout(() => {
                 if (onOk) {
-                  console.log('Calling onOk function'); // Debugging log
+                  // Debugging log
                   onOk();
                 }
                 onClose();

@@ -62,8 +62,6 @@ export const getServices = async (categorie = null, from = null, to = null) => {
     }
   
     const { data, error } = await query;
-    console.log(data);
-  
     if (error) throw error;
     return data;
   };
@@ -104,17 +102,13 @@ export const checkUserSession = async () => {
       
       case 'google':
         const decodedGoogle = decodeJWT(tokenData.token);
-        console.log("checkUserSession, ", decodedGoogle);
         const { data: existingUsers, error: userError } = await supabase
           .from('users')
           .select('*')
           .eq('email', decodedGoogle.email)
           .single();
 
-          console.log("EMAIL USER", decodedGoogle.email);
-          console.log("SUPABASE,", existingUsers);
-        
-        if (userError) throw userError;
+          if (userError) throw userError;
 
         if (!existingUsers) {
           throw new Error('User not found in database');

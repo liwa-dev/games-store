@@ -39,7 +39,6 @@ const PurchaseWindow = ({ onTogglePerspective, data }) => {
 
 
   function getColorByPrice(price) {
-    console.log(price);
     if (price <= 5) {
       return '#8BC34A'; // Light green for 3.07 TND
     } else if (price <= 20) {
@@ -88,7 +87,7 @@ const PurchaseWindow = ({ onTogglePerspective, data }) => {
         </div>
         <div className={styles.right}>
           <div className={styles.card}>
-            {console.log(translations)}
+            {}
             <h3>1. {translations?.purchese?.montant || "Loading"}</h3>
             <div className={styles.amountOptions}>
               {data.plans ? data.plans.map((plan) => (
@@ -106,7 +105,7 @@ const PurchaseWindow = ({ onTogglePerspective, data }) => {
                   }}
                   onClick={() => handleAmountSelection(plan.price)}
                 >
-                  {console.log(plan)}
+                  {}
                   {plan.name} {plan.price}TND
                 </Button>
               )) : <p>No plans available</p>}

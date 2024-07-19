@@ -49,12 +49,10 @@ export default function Settings({currentUser}) {
   const { isDarkMode } = useTheme();
 
   const handlePasswordChange = () => {
-    console.log("Changing password...");
-  };
+    };
 
   const handleViewLoginHistory = () => {
-    console.log("Viewing login history...");
-  };
+    };
 
   const handleDeleteAccount = () => {
     openModal(
@@ -83,8 +81,7 @@ export default function Settings({currentUser}) {
       notifyInfo(`You're already logged in with ${platform}`);
     } else {
       alert(`Linking ${platform} account...`);
-      console.log(`Linking ${platform} account...`);
-    }
+      }
   };
 
 

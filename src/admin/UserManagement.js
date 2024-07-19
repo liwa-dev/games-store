@@ -37,7 +37,6 @@ const UserForm = React.forwardRef(({ user, onSave }, ref) => {
       role: editingUser.role // Now it's already a string
     };
   
-    console.log('Submitting user:', userToSave);
     onSave(userToSave);
   };
 
@@ -115,7 +114,6 @@ const UserManagement = () => {
           ...user,
           role: user.role ? (Array.isArray(user.role) ? user.role : user.role.split(',').map(role => role.trim()).filter(role => role !== '')) : []
         }));
-        console.log('Fetched and cleaned users:', cleanedData);
         setUsers(cleanedData);
       } catch (error) {
         console.error('Error fetching users:', error);
@@ -172,15 +170,11 @@ const UserManagement = () => {
         role: editedUser.role.trim() // Ensure role is trimmed
       };
 
-      console.log('Attempting to save user:', userToSave);
-
       if (editedUser.id) {
         // Update existing user logic remains the same
       } else {
         // Add new user
-        console.log('Adding new user:', userToSave);
         const response = await addUser(userToSave);
-        console.log('Response from addUser:', response);
         if (response && response.length > 0) {
           setUsers(prevUsers => [...prevUsers, response[0]]);
           notifySuccess('User added successfully');
