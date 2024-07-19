@@ -142,7 +142,7 @@ export default function Settings({currentUser}) {
             <h3>{translations?.settings?.uiperferences?.dark}</h3>
             <p>{translations?.settings?.uiperferences?.infodark}</p>
           </div>
-          <ThemeToggle />
+          // <ThemeToggle />
         </div>
         <div className={styles.settingItem}>
           <div className={styles.settingInfo}>
