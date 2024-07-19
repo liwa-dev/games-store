@@ -38,7 +38,7 @@ export default function AdminPanel({currentUser}) {
 
   useEffect(() => {
     setActiveSection(menuItems[0].id);
-  }, [menuItems]);
+  }, []);
 
 
   if (currentUser.user.role !== 'admin') {
