@@ -1,6 +1,6 @@
 # Game Digital Shop (Abandoned)
 
-![Game Key Shop Logo](https://via.placeholder.com/800x400?text=Game+Key+Shop+Logo)
+![Game Key Shop Logo](/Untitled.png)
 
 A React-based web application for selling game keys, similar to G2A. This project aimed to create a platform where users could buy and sell game keys with features like user authentication, admin panel, and multi-language support.
 
