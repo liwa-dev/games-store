@@ -1,9 +1,9 @@
 import axios from 'axios';
 import crypto from 'crypto-js';
 
-const clientId = 'qWAUVCSBwJnLLMUA'; // API Client ID
-const clientSecret = 'wozvedWNSTlzOthBTqLbFoTWClTmByck'; // customer Client secret
-const email = 'strrrtm@gmail.com'; // customer email
+const clientId = 'youre id client here'; // API Client ID
+const clientSecret = 'Your"e client secret here'; // customer Client secret
+const email = 'youre email here'; // customer email
 
 const apiKey = crypto.SHA256(clientId + email + clientSecret).toString(crypto.enc.Hex);
 
