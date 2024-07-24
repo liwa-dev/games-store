@@ -1,4 +1,4 @@
-# Game Key Shop (Abandoned)
+# Game Digital Shop (Abandoned)
 
 ![Game Key Shop Logo](https://via.placeholder.com/800x400?text=Game+Key+Shop+Logo)
 
