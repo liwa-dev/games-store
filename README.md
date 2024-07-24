@@ -1,10 +1,12 @@
-# Game Key Shop (Abandon)
+# Game Key Shop (Abandoned)
 
 ![Game Key Shop Logo](https://via.placeholder.com/800x400?text=Game+Key+Shop+Logo)
 
+A React-based web application for selling game keys, similar to G2A. This project aimed to create a platform where users could buy and sell game keys with features like user authentication, admin panel, and multi-language support.
+
 **Note: This project has been discontinued and is no longer actively maintained.**
 
-A React-based web application for selling game keys, similar to G2A. This project reached approximately 70% completion before being discontinued.
+This project reached approximately 70% completion before being discontinued.
 
 ## Table of Contents
 - [Project Status](#project-status)
@@ -17,7 +19,7 @@ A React-based web application for selling game keys, similar to G2A. This projec
 
 ## Project Status
 
-This project has been discontinued and is no longer being actively developed or maintained. The code and documentation are left here for reference purposes only.
+This project has been discontinued and is no longer being actively developed or maintained. The code and documentation are left here for reference purposes only. As it's an unfinished project, there may be some unresolved issues in the code.
 
 ## Features
 
@@ -34,13 +36,13 @@ The following features were partially or fully implemented before the project wa
 
 ## Tech Stack
 
-- React.js
-- Supabase for backend and authentication
-- G2A API integration
-- React Router for navigation
-- Axios for HTTP requests
-- CSS Modules for styling
-- Various React libraries for UI components
+- React.js: Frontend framework
+- Supabase: Backend and authentication services
+- G2A API: Integration for game key data
+- React Router: For navigation within the app
+- Axios: For making HTTP requests
+- CSS Modules: For component-scoped styling
+- Various React libraries: For UI components and functionality
 
 ## Project Structure
 
@@ -79,7 +81,6 @@ Note: You might need to set up some extra things, like environment variables, to
 ## Reasons for Discontinuation
 
 I stopped this project because:
-
 - I don't have much time right now.
 - I need to focus on my studies.
 - This project was just for practice to improve my programming skills.
@@ -87,4 +88,4 @@ I stopped this project because:
 
 ## License
 
-(MITCENSE)[LICENSE]
+[MIT License](LICENSE)
