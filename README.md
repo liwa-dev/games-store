@@ -65,11 +65,11 @@ While this project is no longer maintained, if you wish to examine the code:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/game-key-shop.git
+   git clone https://github.com/liwa-dev/games-store.git
    ```
 2. Navigate to the project directory:
    ```
-   cd game-key-shop
+   cd games-store
    ```
 3. Install dependencies:
    ```
